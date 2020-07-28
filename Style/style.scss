@@ -131,16 +131,16 @@ body {
         background-color: yellow;
         transform: scale(0.9);
       }
-      &#BtnRecomeçar {
-      }
       &#BtnBingo {
         background-color: lawngreen;
+        font-size: 50px;
+        font-weight: bold;
+        letter-spacing: 5px;
+        transform: scale(1.25);
         &:hover {
           box-shadow: 5px 5px 10px gray;
-          transform: scale(1.1);
+          transform: scale(1.5);
         }
-      }
-      &#BtnPausa {
       }
     }
   }

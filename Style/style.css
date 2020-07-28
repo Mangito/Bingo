@@ -165,9 +165,13 @@ body div.Comandos button:active {
 
 body div.Comandos button#BtnBingo {
   background-color: lawngreen;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  transform: scale(1.25);
 }
 
 body div.Comandos button#BtnBingo:hover {
   box-shadow: 5px 5px 10px gray;
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
