@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./reset.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Bingo</title>
+</head>
+
+<body>
+	<header>
+		<h1>Bingo</h1>
+	</header>
+
+	<main>
+		<div class="ListaNumeros">
+			<h2>Número: <span id="NumeroBingoSpan">0</span></h2>
+			<ul id="NumAnteriores"></ul>
+		</div>
+
+		<div class="Cartao">
+			<div>
+				<h2>Bingo!</h2>
+				<ul>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">A</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">B</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">C</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">D</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">E</button></li>
+
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">F</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">G</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">H</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">I</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">J</button></li>
+
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">K</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">L</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">M</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">N</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">O</button></li>
+
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">P</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">Q</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">R</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">S</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">T</button></li>
+
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">U</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">V</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">W</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">X</button></li>
+					<li><button class="BtnNumeroUser" onclick="userClick(this.innerHTML)">Y</button></li>
+				</ul>
+			</div>
+		</div>
+	</main>
+
+	<div class="Comandos">
+		<button id="BtnRecomeçar">Recomeçar</button>
+		<button id="BtnBingo">BINGO</button>
+		<button id="BtnPausa">Pausa</button>
+	</div>
+
+	<script src="./animation.js"></script>
+</body>
+
+</html>
