@@ -4,7 +4,7 @@ const NumAnteriores = document.getElementById("NumAnteriores");
 
 let numeroBingo = 10;
 let numeroUsado = false;
-let maxNovoNumero = 0;
+let maxNovoNumero = 105;
 
 let tempoNovoNumero = 5000;
 let tempoInterval = setInterval(novoNumero, tempoNovoNumero);
@@ -28,7 +28,7 @@ function inicio() {
 			if ((i + 1) % 4 == 0) linha++;
 		}
 	}
-	numeroBingo = Math.floor(Math.random() * 106 + 1);
+	numeroBingo = Math.floor(Math.random() * maxNovoNumero + 1);
 	NumeroBingoSpan.textContent = numeroBingo;
 }
 
@@ -69,7 +69,7 @@ function novoNumero() {
 	else li.style.background = "red";
 	NumAnteriores.appendChild(li);
 	NumAnteriores.scrollTop = NumAnteriores.scrollHeight;
-	numeroBingo = Math.floor(Math.random() * 60 + 1);
+	numeroBingo = Math.floor(Math.random() * maxNovoNumero + 1);
 	NumeroBingoSpan.textContent = numeroBingo;
 	numeroUsado = false;
 	if (tempoNovoNumero > 750) tempoNovoNumero = tempoNovoNumero - 50;
