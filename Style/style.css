@@ -149,4 +149,25 @@ body div.Comandos button {
   padding: 4px 10px;
   border-radius: 6px;
   font-size: 20px;
+  background-color: royalblue;
+  transition: 0.5s;
+}
+
+body div.Comandos button:hover {
+  box-shadow: 5px 5px 10px gray;
+  transform: scale(1.05);
+}
+
+body div.Comandos button:active {
+  background-color: yellow;
+  transform: scale(0.9);
+}
+
+body div.Comandos button#BtnBingo {
+  background-color: lawngreen;
+}
+
+body div.Comandos button#BtnBingo:hover {
+  box-shadow: 5px 5px 10px gray;
+  transform: scale(1.1);
 }

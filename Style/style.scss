@@ -121,6 +121,27 @@ body {
       padding: 4px 10px;
       border-radius: 6px;
       font-size: 20px;
+      background-color: royalblue;
+      transition: 0.5s;
+      &:hover {
+        box-shadow: 5px 5px 10px gray;
+        transform: scale(1.05);
+      }
+      &:active {
+        background-color: yellow;
+        transform: scale(0.9);
+      }
+      &#BtnRecomeçar {
+      }
+      &#BtnBingo {
+        background-color: lawngreen;
+        &:hover {
+          box-shadow: 5px 5px 10px gray;
+          transform: scale(1.1);
+        }
+      }
+      &#BtnPausa {
+      }
     }
   }
 }
