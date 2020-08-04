@@ -1,8 +1,8 @@
 const BtnNumeroUser = document.getElementsByClassName("BtnNumeroUser");
-const NumeroBingoSpan = document.getElementById("NumeroBingoSpan");
+const NumeroInesperadoSpan = document.getElementById("NumeroInesperadoSpan");
 const NumAnteriores = document.getElementById("NumAnteriores");
 
-let numeroBingo = 10;
+let numeroInesperado = 10;
 let numeroUsado = false;
 let maxNovoNumero = 105;
 
@@ -28,8 +28,8 @@ function inicio() {
 			if ((i + 1) % 4 == 0) linha++;
 		}
 	}
-	numeroBingo = Math.floor(Math.random() * maxNovoNumero + 1);
-	NumeroBingoSpan.textContent = numeroBingo;
+	numeroInesperado = Math.floor(Math.random() * maxNovoNumero + 1);
+	NumeroInesperadoSpan.textContent = numeroInesperado;
 }
 
 // Recebe o calor do cartão que o utilizador clicou
@@ -37,7 +37,7 @@ function userClick(numeroCartao) {
 	for (let i = 0; i < BtnNumeroUser.length; i++) {
 		const valor = Number(BtnNumeroUser[i].innerHTML);
 		if (valor === Number(numeroCartao)) {
-			if (valor === numeroBingo) {
+			if (valor === numeroInesperado) {
 				BtnNumeroUser[i].style.background = "grey";
 				BtnNumeroUser[i].disabled = true;
 				numeroUsado = true;
@@ -47,10 +47,10 @@ function userClick(numeroCartao) {
 	}
 }
 
-// Quando o user clicar no btn "Bingo"
+// Quando o user clicar no btn "Inesperado"
 // Chama uma outra função que verifica  se o user venceu
 // Se vencer pára o jogo
-document.getElementById("BtnBingo").addEventListener("click", () => {
+document.getElementById("BtnInesperado").addEventListener("click", () => {
 	const checkVitoriaVar = verificarVitoria();
 	if (checkVitoriaVar) {
 		alert("Venceste");
@@ -68,13 +68,13 @@ document.getElementById("BtnRecomeçar").addEventListener("click", () => window.
 // Mostra um novo número na tela
 function novoNumero() {
 	const li = document.createElement("li");
-	li.innerHTML = numeroBingo;
+	li.innerHTML = numeroInesperado;
 	if (numeroUsado) li.style.background = "green";
 	else li.style.background = "red";
 	NumAnteriores.appendChild(li);
 	NumAnteriores.scrollTop = NumAnteriores.scrollHeight;
-	numeroBingo = Math.floor(Math.random() * maxNovoNumero + 1);
-	NumeroBingoSpan.textContent = numeroBingo;
+	numeroInesperado = Math.floor(Math.random() * maxNovoNumero + 1);
+	NumeroInesperadoSpan.textContent = numeroInesperado;
 	numeroUsado = false;
 	if (tempoNovoNumero > 750) tempoNovoNumero = tempoNovoNumero - 50;
 }

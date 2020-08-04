@@ -68,7 +68,7 @@ body {
         align-items: center;
         justify-content: center;
         font-size: 30px;
-        span#NumeroBingoSpan {
+        span#NumeroInesperadoSpan {
           @include bolaStyle(100px, 100px);
           background-color: #88a4f8;
         }
@@ -143,7 +143,7 @@ body {
         background-color: yellow;
         transform: scale(0.9);
       }
-      &#BtnBingo {
+      &#BtnInesperado {
         background-color: lawngreen;
         font-size: 50px;
         font-weight: bold;

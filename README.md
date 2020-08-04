@@ -1,5 +1,5 @@
-# Bingo
+# Inesperado
 
-Bingo o Jogo
+Inesperado o Jogo
 
-[Site](https://mangito.github.io/Bingo)
+[Site](https://mangito.github.io/inesperado)

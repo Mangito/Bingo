@@ -59,7 +59,7 @@ body main div.ListaNumeros h2 {
   font-size: 30px;
 }
 
-body main div.ListaNumeros h2 span#NumeroBingoSpan {
+body main div.ListaNumeros h2 span#NumeroInesperadoSpan {
   width: 100px;
   height: 100px;
   display: flex;
@@ -176,7 +176,7 @@ body div.Comandos button:active {
   transform: scale(0.9);
 }
 
-body div.Comandos button#BtnBingo {
+body div.Comandos button#BtnInesperado {
   background-color: lawngreen;
   font-size: 50px;
   font-weight: bold;
@@ -184,7 +184,7 @@ body div.Comandos button#BtnBingo {
   transform: scale(1.25);
 }
 
-body div.Comandos button#BtnBingo:hover {
+body div.Comandos button#BtnInesperado:hover {
   box-shadow: 5px 5px 10px gray;
   transform: scale(1.5);
 }
