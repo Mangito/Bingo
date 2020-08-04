@@ -51,14 +51,18 @@ function userClick(numeroCartao) {
 // Chama uma outra função que verifica  se o user venceu
 // Se vencer pára o jogo
 document.getElementById("BtnBingo").addEventListener("click", () => {
-	const checkVitoriaVar = checkVitoria();
+	const checkVitoriaVar = verificarVitoria();
 	if (checkVitoriaVar) {
 		alert("Venceste");
-		tempoInterval = clearInterval;
+		clearInterval(tempoInterval);
 	} else alert("Ainda te faltam alguns números");
 });
 
-document.getElementById("BtnPausa").addEventListener("click", () => alert("Jogo em Pausa. Clica 'Ok' para continuar."));
+document.getElementById("BtnPausa").addEventListener("click", () => {
+	clearInterval(tempoInterval);
+	alert("Jogo em Pausa. Clica 'Ok' para continuar.");
+	tempoInterval = setInterval(novoNumero, tempoNovoNumero);
+});
 document.getElementById("BtnRecomeçar").addEventListener("click", () => window.location.reload());
 
 // Mostra um novo número na tela
@@ -77,7 +81,7 @@ function novoNumero() {
 
 // Função que verifica de o user venceu
 // Caso os btns estejam desabilitados
-function checkVitoria() {
+function verificarVitoria() {
 	// -------------  Horizontal
 	if (BtnNumeroUser[0].disabled === true
 		&& BtnNumeroUser[1].disabled === true

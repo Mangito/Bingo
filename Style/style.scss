@@ -81,6 +81,7 @@ body {
         overflow-y: auto;
         li {
           @include bolaStyle(75px, 75px);
+          font-size: 40px;
         }
       }
     }
